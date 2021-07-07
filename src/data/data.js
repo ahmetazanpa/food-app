@@ -1,0 +1,61 @@
+export const detailsList = ['prepTime', 'exp', 'skill', 'cousine', 'type'];
+export const iconsByType = {
+    prepTime: 'fire',
+    exp: 'badge',
+    skill: 'energy',
+    cousine: 'chemistry',
+    type: 'drop',
+};
+
+export default [
+    {
+        image: "https://i.nefisyemektarifleri.com/2021/06/06/efsane-lezzet-tencerede-kofteli-sebze-yemegi.jpg",
+        title: 'Şarlot',
+        description: "Kremşantiyi 1 su bardağı soğuk sütle çırpalım....",
+        prepTime: '1 saat',
+        exp: 10,
+        skill: 'easy',
+        cousine: 'Vegan',
+        type: 'Pasta/Kek',
+    },
+    {
+        image: "https://i.nefisyemektarifleri.com/2021/06/06/visneli-limonlu-kek.jpg",
+        title: 'Şarlot 2',
+        description: "Kremşantiyi 1 su bardağı soğuk sütle çırpalım....",
+        prepTime: '2 saat',
+        exp: 20,
+        skill: 'easy',
+        cousine: 'Vegan',
+        type: 'Pasta/Kek',
+    },
+    {
+        image: "https://i.nefisyemektarifleri.com/2021/06/05/sarlot.jpg",
+        title: 'Şarlot 3',
+        description: "Kremşantiyi 1 su bardağı soğuk sütle çırpalım....",
+        prepTime: '3 saat',
+        exp: 30,
+        skill: 'easy',
+        cousine: 'Vegan',
+        type: 'Pasta/Kek',
+    },
+    {
+        image: "https://i.nefisyemektarifleri.com/2021/06/05/yumusacik-tel-tel-tereyagli-sodali-acma-15.jpg",
+        title: 'Şarlot 4',
+        description: "Kremşantiyi 1 su bardağı soğuk sütle çırpalım....",
+        prepTime: '4 saat',
+        exp: 40,
+        skill: 'easy',
+        cousine: 'Vegan',
+        type: 'Pasta/Kek',
+    },
+    {
+        image: "https://i.nefisyemektarifleri.com/2021/06/06/somelek-kofte-kahramanmaras-yoresine-ait.jpg",
+        title: 'Şarlot 5',
+        description: "Kremşantiyi 1 su bardağı soğuk sütle çırpalım....",
+        prepTime: '5 saat',
+        exp: 50,
+        skill: 'easy',
+        cousine: 'Vegan',
+        type: 'Pasta/Kek',
+    },
+]
