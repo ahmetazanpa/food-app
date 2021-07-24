@@ -1,10 +1,11 @@
-export const detailsList = ['prepTime', 'serving', 'skill', 'calory', 'category'];
+export const detailsList = ['prepTime', 'serving', 'skill', 'calory', 'category', 'mustache'];
 export const iconsByType = {
     prepTime: 'clock',
     serving: 'people',//'badge',
     skill: 'energy',
     calory: 'fire',
     category: 'drop',
+    mustache: 'mustache'
 };
 
 export default [
@@ -18,6 +19,7 @@ export default [
         skill: 'Kolay',
         calory: '301/kcal',
         category: 'Ana Yemek',
+        mustache: 'Ali'
     },
     {
         id: 1,
@@ -29,6 +31,7 @@ export default [
         skill: 'easy',
         calory: 'Vegan',
         category: 'Pasta/Kek',
+        mustache: 'Ali'
     },
     {
         id: 2,
@@ -38,8 +41,9 @@ export default [
         prepTime: '3 saat',
         serving: 30,
         skill: 'easy',
-        cousine: 'Vegan',
+        calory: 'Vegan',
         category: 'Pasta/Kek',
+        mustache: 'Ali'
     },
     {
         id: 3,
@@ -49,8 +53,9 @@ export default [
         prepTime: '4 saat',
         serving: 40,
         skill: 'easy',
-        cousine: 'Vegan',
+        calory: 'Vegan',
         category: 'Pasta/Kek',
+        mustache: 'Ali'
     },
     {
         id: 4,
@@ -60,7 +65,8 @@ export default [
         prepTime: '5 saat',
         serving: 50,
         skill: 'easy',
-        cousine: 'Vegan',
+        calory: 'Vegan',
         category: 'Pasta/Kek',
+        mustache: 'Ali'
     },
 ]

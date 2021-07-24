@@ -6,16 +6,11 @@ import { Transitioning, Transition } from 'react-native-reanimated';
 import posed, { Transition as PoseTransition } from 'react-native-pose';
 import data, { detailsList, iconsByType } from '../../data/data';
 import { DURATION, TITLE_SIZE, SPACING, IMAGE_SIZE, colors, width, height } from '../../components/Constant'
-import { Rating } from 'react-native-elements';
+import { Rating, AirbnbRating } from 'react-native-elements';
 
 const Title = ({ index, text, color }) => {
-  
-  function ratingCompleted(rating) {
-    console.log("Rating is: " + rating)
-  }
-
   return (
-    <Item style={{ heigth: TITLE_SIZE * 3, justifyContent: 'space-between', flexDirection: 'row', alignItems:'center' }}>
+    <Item style={{ heigth: TITLE_SIZE * 3, marginTop: 20, justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center', }}>
       <Text
         key={`title-${index}`}
         style={{
@@ -27,12 +22,16 @@ const Title = ({ index, text, color }) => {
         {text}
       </Text>
       <Rating
-        type='star'
-        //showRating
+        type='custom'
+        showRating
         ratingCount={1}
-        imageSize={18}
-        onFinishRating={this.ratingCompleted}
-        style={{ flexDirection: 'row', width: 60, borderWidth: 1, borderRadius: 50, borderColor: colors.darkText, fontSize: 10, marginRight: 20, padding: 5 }}
+        imageSize={20}
+        tintColor={colors.white}
+        ratingColor={colors.darkBg}
+        ratingBackgroundColor={colors.darkBg}
+        fractions="{5}"
+        startingValue="{1}"
+        style={{ flexDirection: 'row-reverse', width: 70, borderWidth: 1, borderRadius: 50, fontSize: 10, marginRight: 20, padding: 6, backgroundColor: colors.white, borderColor: colors.white, shadowRadius: 20, elevation: 5, shadowOpacity: 0.5, shadowColor: colors.lightBg, shadowOffset: { width: 0, height: 15 } }}
       />
     </Item>
   );
@@ -82,8 +81,8 @@ const Details = ({ color, index }) => {
 const Description = ({ index, text, color }) => {
   return (
     <Item>
-      <Text key={`description-${index}`} style={{ fontSize: 16, color}} numberOfLines={3} ellipsizeMode='tail'>
-        {text} 
+      <Text key={`description-${index}`} style={{ fontSize: 16, color }} numberOfLines={3} ellipsizeMode='tail'>
+        {text}
       </Text>
     </Item>
   );
@@ -148,7 +147,7 @@ function FoodListScreen() {
   const setActiveIndex = useCallback((newIndex) => {
     activeIndex.setValue(newIndex);
     ref.current.animateNextTransition();
-    setIndex(newIndex);    
+    setIndex(newIndex);
   });
 
   const translateY = animation.interpolate({
@@ -214,11 +213,11 @@ function FoodListScreen() {
                   ]}
                 >
                   <Image
-                      style={[styles.image,{ shadowColor: index % 2 === 0 ? '#F2F2F2' : '#55589E' }]}
-                      source={{
-                        uri: data[index].image,
-                      }}
-                    />
+                    style={[styles.image, { shadowColor: index % 2 === 0 ? '#F2F2F2' : '#55589E' }]}
+                    source={{
+                      uri: data[index].image,
+                    }}
+                  />
                 </PosedView> :
                 <PosedView
                   key='image1'
@@ -227,12 +226,12 @@ function FoodListScreen() {
                     { borderColor: index % 2 === 0 ? colors.darkBg : colors.lightBg }
                   ]}
                 >
-                   <Image
-                      style={[styles.image,{ shadowColor: index % 2 === 0 ? '#F2F2F2' : '#55589E' }]}
-                      source={{
-                        uri: data[index].image,
-                      }}
-                    />
+                  <Image
+                    style={[styles.image, { shadowColor: index % 2 === 0 ? '#F2F2F2' : '#55589E' }]}
+                    source={{
+                      uri: data[index].image,
+                    }}
+                  />
                 </PosedView>
             }
           </PoseTransition>
@@ -275,7 +274,7 @@ const styles = StyleSheet.create({
     right: '-26%',
     width: IMAGE_SIZE,
     height: '40%',
-    elevation: 25,  
+    elevation: 25,
   },
   image: {
     flex: 1,

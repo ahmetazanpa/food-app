@@ -12,5 +12,6 @@ export const colors = {
     darkText: '#A5A6AA',
     titleText: '#388E3C',
     categoryText: '#757575',
+    white: '#FFFF',
     transparent: 'transparent',
   };
